@@ -30,7 +30,7 @@ function Supplierpage() {
 
   useEffect(() => {
     dispatch(gettingallSupplier());
-  }, [dispatch, deleteSupplier, editedsupplier]);
+  },[dispatch, deleteSupplier, editedsupplier]);
 
   useEffect(() => {
     if (query.trim() !== "") {

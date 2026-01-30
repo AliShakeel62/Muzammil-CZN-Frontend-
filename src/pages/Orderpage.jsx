@@ -26,8 +26,8 @@ function Orderpage() {
     searchdata,
   } = useSelector((state) => state.order);
   const { getallproduct } = useSelector((state) => state.product);
-  const { getallCategory } = useSelector((state) => state.category);
-  const { Authuser, isUserSignup } = useSelector((state) => state.auth);
+  // const { getallCategory } = useSelector((state) => state.category);
+  const { Authuser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const [status, setstatus] = useState(false);
   const [query, setquery] = useState("");
@@ -49,14 +49,6 @@ function Orderpage() {
     dispatch(gettingallOrder());
  
   }, [dispatch,  editorder]);
-
-
-
-
-
-
-
-
 
 
 
@@ -124,7 +116,7 @@ function Orderpage() {
     };
   
     try {
-      const result = await dispatch(createdOrder(orderData)).unwrap();
+      // const result = await dispatch(createdOrder(orderData)).unwrap();
       toast.success("Order created successfully");
       resetForm();
     } catch (error) {

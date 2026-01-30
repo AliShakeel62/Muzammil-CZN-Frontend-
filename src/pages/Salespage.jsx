@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TopNavbar from "../Components/TopNavbar";
 import { IoMdAdd } from "react-icons/io";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import {gettingallproducts} from '../features/productSlice'
+
 import FormattedTime from "../lib/FormattedTime ";
 import {
   CreateSales,gettingallSales,EditSales, searchsalesdata
@@ -15,7 +15,6 @@ import toast from "react-hot-toast";
 
 function Salespage() {
   const {   getallsales, searchdata,
-    isgetallsales,  editedsales, iscreatedsales
      } = useSelector(
     (state) => state.sales
   );
@@ -27,7 +26,7 @@ function Salespage() {
   const [query, setquery] = useState("");
 
   const [name, setName] = useState("");
-  const [Category, setCategory] = useState("");
+  // const [Category, setCategory] = useState("");
   const [Product, setProduct] = useState("");
   const [Payment, setPayment] = useState("");
   const [Price, setPrice] = useState("");
@@ -42,9 +41,7 @@ function Salespage() {
   useEffect(() => {
    dispatch(gettingallSales())
   
-  }, [dispatch,  CreateSales,EditSales]);
-
- 
+  }, [dispatch,CreateSales,EditSales]);
   useEffect(() => {
     if (query.trim() !== "") {
       const repeatTimeout = setTimeout(() => {

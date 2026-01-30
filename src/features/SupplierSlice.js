@@ -126,7 +126,7 @@ const supplierSlice = createSlice({
       
       
       .addCase(gettingallSupplier.rejected, (state, action) => {
-        state. isallSupplier = false;
+        state.isallSupplier = false;
 
       })
 

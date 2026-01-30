@@ -26,7 +26,7 @@ function Productpage() {
   const [Price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [Desciption, setDesciption] = useState("");
-  const [dateAdded, setDateAdded] = useState(new Date().toISOString().split('T')[0]); // Initialize with current date
+  const [dateAdded,setDateAdded] = useState(new Date().toISOString().split('T')[0]); // Initialize with current date
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 

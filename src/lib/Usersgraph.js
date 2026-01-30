@@ -23,15 +23,13 @@ const UserRoleChart = () => {
   }, [dispatch]);
 
   useEffect(() => {
-
-
-        setUserData({
+ setUserData({
           staff: staffuser?.length || 0,
           manager: manageruser?.length || 0,
           admin: adminuser?.length || 0,
         });
-     
-  }, []);
+    
+  },[]);
 
   const data = {
     labels: ["Staff", "Manager", "Admin"],

@@ -23,7 +23,7 @@ const SalesChart = () => {
     labels: [],
     datasets: [],
   });
-
+console.log(messages)
   // Fetch sales data on component mount
   useEffect(() => {
     dispatch(gettingallSales());

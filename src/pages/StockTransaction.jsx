@@ -19,7 +19,7 @@ import {
 import toast from "react-hot-toast";
 
 function StockTransaction() {
-  const { getallStocks, isgetallStocks, iscreatedStocks,searchdata } = useSelector(
+  const { getallStocks,  iscreatedStocks,searchdata } = useSelector(
     (state) => state.stocktransaction
   );
 
@@ -37,7 +37,7 @@ const[query,setquery]=useState("");
   const [quantity, setquantity] = useState("");
   const [supplier, setsupplier] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  // const [selectedProduct, setSelectedProduct] = useState(null);
 
 
   useEffect(() => {

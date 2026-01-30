@@ -79,15 +79,15 @@ const stocktransactionSlice = createSlice({
 
 
 
-      .addCase(createStockTransaction .pending, (state) => {
+      .addCase(createStockTransaction.pending, (state) => {
       state.iscreatedStocks = true;
       })
-      .addCase(createStockTransaction .fulfilled, (state, action) => {
+      .addCase(createStockTransaction.fulfilled, (state, action) => {
       state.iscreatedStocks = false;
       state.getallStocks.push(action.payload);
 
       })
-      .addCase(createStockTransaction .rejected, (state, action) => {
+      .addCase(createStockTransaction.rejected, (state, action) => {
       state.iscreatedStocks = false;
 
       })

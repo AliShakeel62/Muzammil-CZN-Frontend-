@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import TopNavbar from "../Components/TopNavbar";
 import { useDispatch, useSelector } from "react-redux";
 import { IoMdAdd } from "react-icons/io";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
-import { signup } from "../features/authSlice";
 import FormattedTime from "../lib/FormattedTime ";
 import OrderStatusChart from "../lib/OrderStatusChart"
 import {
@@ -23,14 +22,8 @@ function Orderpage() {
  
   const {
     getorder,
-    isgetorder,
-    isorderadd,
-    isorderremove,
     editorder,
-    iseditorder,
     searchdata,
-    isshowgraph,
-  statusgraph
   } = useSelector((state) => state.order);
   const { getallproduct } = useSelector((state) => state.product);
   const { getallCategory } = useSelector((state) => state.category);

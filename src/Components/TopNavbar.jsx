@@ -1,12 +1,9 @@
-import React from 'react';
-import { FaRegCircleUser } from "react-icons/fa6";
-import { HiDotsVertical } from "react-icons/hi";
 import {  useSelector } from "react-redux";
 import image from "../images/user.png";
 import ThemeToggle from "../lib/ThemeToggle";
 import { Link } from 'react-router-dom';
 function TopNavbar() {
-  const { Authuser, isUserSignup } = useSelector((state) => state.auth);
+  const { Authuser} = useSelector((state) => state.auth);
 
 
 

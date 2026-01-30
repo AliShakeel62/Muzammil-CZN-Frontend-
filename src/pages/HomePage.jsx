@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { FaArrowRightLong, FaPlus, FaMinus } from "react-icons/fa6";
+import { useState } from 'react';
+import {  FaPlus, FaMinus } from "react-icons/fa6";
 import Navbar from '../Components/Navbar';
 import Footer from "../Components/Footer";
-import { Link } from 'react-router-dom';
+
 
 function HomePage() {
-  const [arrowShow, setArrowShow] = useState(false);
+  // const [arrowShow, setArrowShow] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(null);
 
-  const handleButtonHover = () => {
-    setArrowShow(true);
-  };
+  // const handleButtonHover = () => {
+  //   setArrowShow(true);
+  // };
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);

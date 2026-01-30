@@ -110,7 +110,7 @@ const[query,setquery]=useState("");
           <button
             onClick={() => {
               setIsFormVisible(true);
-              setSelectedProduct(null);
+              // setSelectedProduct(null);
             }}
             className="bg-blue-800 text-white w-40 h-12 rounded-lg flex items-center justify-center"
           >

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function Footer() {
@@ -16,10 +15,10 @@ function Footer() {
         <div>
           <h3 className="text-lg font-medium mb-3">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-gray-300 hover:text-white">Dashboard</a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white">Products</a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white">Reports</a></li>
-            <li><a href="#" className="text-gray-300 hover:text-white">Settings</a></li>
+            <li><a href="#!" className="text-gray-300 hover:text-white">Dashboard</a></li>
+            <li><a href="#!" className="text-gray-300 hover:text-white">Products</a></li>
+            <li><a href="#!" className="text-gray-300 hover:text-white">Reports</a></li>
+            <li><a href="#!" className="text-gray-300 hover:text-white">Settings</a></li>
           </ul>
         </div>
 
@@ -32,10 +31,10 @@ function Footer() {
 
    
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-300 hover:text-white text-xl"><FaFacebook /></a>
-            <a href="#" className="text-gray-300 hover:text-white text-xl"><FaTwitter /></a>
-            <a href="#" className="text-gray-300 hover:text-white text-xl"><FaLinkedin /></a>
-            <a href="#" className="text-gray-300 hover:text-white text-xl"><FaInstagram /></a>
+            <a href="#!" className="text-gray-300 hover:text-white text-xl"><FaFacebook /></a>
+            <a href="#!" className="text-gray-300 hover:text-white text-xl"><FaTwitter /></a>
+            <a href="#!" className="text-gray-300 hover:text-white text-xl"><FaLinkedin /></a>
+            <a href="#!" className="text-gray-300 hover:text-white text-xl"><FaInstagram /></a>
           </div>
         </div>
       </div>

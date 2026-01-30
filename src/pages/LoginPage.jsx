@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch, useSelector } from "react-redux";
 import * as yup from "yup";
 import { login } from '../features/authSlice'; 
-import homeImage from '../images/welcomeimage.webp'
-
 function LoginPage() {
-  const { Authuser, isUserLogin } = useSelector((state) => state.auth);
+  const { Authuser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 const navigator=useNavigate()
   const schema = yup.object().shape({
@@ -33,7 +31,7 @@ const navigator=useNavigate()
       if(Authuser.user.role==="staff"){
         navigator('/StaffDashboard')
       } 
-      else if(Authuser.user.role=="admin"){
+      else if(Authuser.user.role==="admin"){
         navigator('/AdminDashboard')
       }
       else{

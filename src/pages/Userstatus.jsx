@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect } from "react";
 import TopNavbar from "../Components/TopNavbar";
-import { IoMdAdd } from "react-icons/io";
-import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { TiDelete } from "react-icons/ti";
 import image from "../images/user.png";
@@ -17,7 +15,7 @@ import  UserRoleChart from '../lib/Usersgraph'
 function Userstatus() {
   const { staffuser, manageruser, adminuser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  const { Authuser } = useSelector((state) => state.auth);
+  // const { Authuser } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(staffUser());

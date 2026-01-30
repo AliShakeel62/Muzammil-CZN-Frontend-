@@ -2,7 +2,7 @@ import React from 'react';
 import { AiOutlineProduct } from "react-icons/ai";
 import { RiStockLine } from "react-icons/ri";
 import { FiLogOut, FiShoppingCart } from "react-icons/fi";
-import { MdOutlineInventory2, MdPointOfSale, MdOutlineCategory } from "react-icons/md";
+import {  MdPointOfSale, MdOutlineCategory } from "react-icons/md";
 import { TfiSupport } from "react-icons/tfi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { RxActivityLog, RxDashboard } from "react-icons/rx";

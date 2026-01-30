@@ -1,6 +1,5 @@
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import { IoMdAdd } from "react-icons/io";
-import { FaFileExport } from "react-icons/fa6";
 import FormattedTime from "../lib/FormattedTime ";
 
 
@@ -22,7 +21,7 @@ function Categorypage() {
 
 
   
-  const { getallCategory, iscreatedCategory,  searchdata } = useSelector((state) => state.category);
+  const { getallCategory,searchdata } = useSelector((state) => state.category);
   const dispatch = useDispatch();
   const [query, setquery] = useState("");
 
@@ -30,25 +29,9 @@ function Categorypage() {
   const [description, setdescription] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-
-
-
-
-
-
-
-
-
-  
-  useEffect(() => {
-
+useEffect(() => {
     dispatch(gettingallCategory());
-  }, [dispatch]);
-
-  
-
-
-
+  },[dispatch]);
   useEffect(() => {
     if (query.trim() !== "") {
       const repeatTimeout = setTimeout(() => {
@@ -58,7 +41,7 @@ function Categorypage() {
     } else {
       dispatch(gettingallCategory()); 
     }
-  }, [query, dispatch]); 
+  },[query, dispatch]); 
 
 
   const handleremove = async (categoryId) => {

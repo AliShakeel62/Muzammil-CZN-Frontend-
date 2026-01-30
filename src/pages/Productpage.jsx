@@ -286,9 +286,9 @@ function Productpage() {
                 displayProducts.length > 0 ? (
                   displayProducts.map((product, index) => {
                     // Format the date for display
-                    const formattedDate = product.dateAdded 
-                      ? new Date(product.dateAdded).toLocaleDateString() 
-                      : 'N/A';
+                    // const formattedDate = product.dateAdded 
+                    //   ? new Date(product.dateAdded).toLocaleDateString() 
+                    //   : 'N/A';
                     
                     return (
                       <tr key={product._id}>

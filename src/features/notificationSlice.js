@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axiosInstance from "../lib/axios";
-import socket from "../lib/socket"; 
 import toast from "react-hot-toast";
 
 
@@ -50,10 +49,10 @@ export const deleteNotification = createAsyncThunk(
   "notification/deleteNotification",
   async (NotificationId, { rejectWithValue }) => {
     try {
-      const response = await axiosInstance.delete(
-        `notification/deleteNotification/${NotificationId}`,
-        { withCredentials: true }
-      );
+      // const response = await axiosInstance.delete(
+      //   `notification/deleteNotification/${NotificationId}`,
+      //   { withCredentials: true }
+      // );
       return NotificationId; 
     } catch (error) {
       return rejectWithValue(

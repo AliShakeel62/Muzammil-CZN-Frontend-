@@ -10,7 +10,7 @@ function Activitylogpage() {
   const [currentPage, setCurrentPage] = useState(1);
   const logsPerPage = 10;
 
-  const { activityLogs, isFetching, userdata } = useSelector((state) => state.activity);
+  const { activityLogs } = useSelector((state) => state.activity);
   const { Authuser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
@@ -31,7 +31,7 @@ function Activitylogpage() {
     return () => {
       socket.off("newActivityLog");
     };
-  }, [dispatch, Authuser.id]);
+  },[dispatch, Authuser.id]);
 
   useEffect(() => {
     setLogs(activityLogs);

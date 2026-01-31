@@ -7,12 +7,10 @@ import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import FormattedTime from "../lib/FormattedTime ";
 import OrderStatusChart from "../lib/OrderStatusChart"
 import {
-  createdOrder,
   Removedorder,
   updatestatusOrder,
   gettingallOrder,
   SearchOrder,
- 
 } from "../features/orderSlice";
 
 import { gettingallproducts } from "../features/productSlice";
@@ -104,16 +102,16 @@ function Orderpage() {
       return;
     }
   
-    const orderData = {
-      user: Authuser?.id || "",
-      Description,
-      status,
-      Product: {
-        product: Product,  
-        price: Number(Price), 
-        quantity: Number(quantity)
-      }
-    };
+    // const orderData = {
+    //   user: Authuser?.id || "",
+    //   Description,
+    //   status,
+    //   Product: {
+    //     product: Product,  
+    //     price: Number(Price), 
+    //     quantity: Number(quantity)
+    //   }
+    // };
   
     try {
       // const result = await dispatch(createdOrder(orderData)).unwrap();

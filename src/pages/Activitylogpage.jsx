@@ -31,6 +31,7 @@ function Activitylogpage() {
     return () => {
       socket.off("newActivityLog");
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[dispatch, Authuser.id]);
 
   useEffect(() => {

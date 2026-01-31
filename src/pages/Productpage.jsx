@@ -26,8 +26,8 @@ function Productpage() {
   const [Price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [Desciption, setDesciption] = useState("");
-  const [dateAdded,setDateAdded] = useState(new Date().toISOString().split('T')[0]); // Initialize with current date
-  const [isFormVisible, setIsFormVisible] = useState(false);
+  const dateAdded = new Date().toISOString().split('T')[0];
+   const [isFormVisible, setIsFormVisible] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ function Productpage() {
       Price,
       quantity,
       Desciption,
-      dateAdded: selectedProduct.dateAdded || new Date().toISOString() 
+      dateAdded: selectedProduct.dateAdded || new Date().toISOString()
     };
 
     dispatch(EditProduct({ id: selectedProduct._id, updatedData }))
@@ -86,13 +86,13 @@ function Productpage() {
 
   const submitProduct = async (event) => {
     event.preventDefault();
-    const productData = { 
-      name, 
-      Desciption, 
-      Category, 
-      Price, 
+    const productData = {
+      name,
+      Desciption,
+      Category,
+      Price,
       quantity,
-      dateAdded: new Date(dateAdded).toISOString() 
+      dateAdded: new Date(dateAdded).toISOString()
     };
 
     dispatch(Addproduct(productData))
@@ -112,7 +112,7 @@ function Productpage() {
     setPrice("");
     setQuantity("");
     setDesciption("");
-   
+
   };
 
   const handleEditClick = (product) => {
@@ -122,8 +122,8 @@ function Productpage() {
     setPrice(product.Price);
     setQuantity(product.quantity);
     setDesciption(product.Desciption);
-  
-   
+
+
     setIsFormVisible(true);
   };
 
@@ -253,7 +253,7 @@ function Productpage() {
                 />
               </div>
 
-              
+
 
               <button
                 type="submit"
@@ -283,16 +283,16 @@ function Productpage() {
               </thead>
               <tbody>
                 {Array.isArray(displayProducts) &&
-                displayProducts.length > 0 ? (
+                  displayProducts.length > 0 ? (
                   displayProducts.map((product, index) => {
                     // Format the date for display
                     // const formattedDate = product.dateAdded 
                     //   ? new Date(product.dateAdded).toLocaleDateString() 
                     //   : 'N/A';
-                    
+
                     return (
                       <tr key={product._id}>
-                        <td className="px-3 py-2 border">{index+1}</td>
+                        <td className="px-3 py-2 border">{index + 1}</td>
                         <td className="px-3 py-2 border">{product.name}</td>
                         <td className="px-3 py-2 border">
                           {product.Category?.name || "No Category"}

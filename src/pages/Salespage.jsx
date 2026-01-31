@@ -40,8 +40,8 @@ function Salespage() {
 
   useEffect(() => {
    dispatch(gettingallSales())
-  
-  }, [dispatch,CreateSales,EditSales]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[dispatch,CreateSales,EditSales]);
   useEffect(() => {
     if (query.trim() !== "") {
       const repeatTimeout = setTimeout(() => {
@@ -51,7 +51,7 @@ function Salespage() {
     } else {
       dispatch(gettingallSales());
     }
-  }, [query, dispatch]);
+  }, [query,dispatch]);
 
 
  

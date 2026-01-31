@@ -29,6 +29,7 @@ function Dashboardpage() {
     return () => {
       socket.off("newActivityLog"); // Clean up the listener
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   return (

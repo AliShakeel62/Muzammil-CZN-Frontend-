@@ -29,7 +29,7 @@ const UserRoleChart = () => {
           admin: adminuser?.length || 0,
         });
     
-  },[]);
+  });
 
   const data = {
     labels: ["Staff", "Manager", "Admin"],
